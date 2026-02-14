@@ -64,7 +64,7 @@
   font-size: 0.95rem;
   color: #8b4a6b;
   box-shadow: var(--shadow-card);
-  animation: bubble-float 2.5s ease-out forwards;
+  animation: bubble-float 7s ease-out forwards;
   max-width: 280px;
 }
 
@@ -73,12 +73,16 @@
     opacity: 0;
     transform: translateY(0) scale(0.9);
   }
-  15% {
+  8% {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+  75% {
+    opacity: 1;
+    transform: translateY(-30px) scale(1);
+  }
   100% {
     opacity: 0;
-    transform: translateY(-120px) scale(0.95);
+    transform: translateY(-80px) scale(0.95);
   }
 }

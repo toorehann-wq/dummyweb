@@ -36,7 +36,7 @@ export default function ComplimentButton() {
     })
     setTimeout(() => {
       setBubbles((prev) => prev.filter((b) => b.id !== id))
-    }, 2500)
+    }, 7000)
   }, [])
 
   return (
