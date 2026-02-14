@@ -13,6 +13,8 @@ import firstChat3 from '../../assets/first_chat3.jpg'
 import vcSs from '../../assets/vc_ss.jpg'
 import vcSs2 from '../../assets/vc_ss2.jpg'
 import loveuSs from '../../assets/loveu_ss.jpg'
+import photo1 from '../../assets/IMG_20260214_151707_432.jpg'
+import usImg from '../../assets/us.png'
 
 const CUTE_MOMENTS = [cuteMoment1, cuteMoment2, cuteMoment3]
 const FIRST_CHAT = [firstChat3, firstChat1, firstChat2]
@@ -78,7 +80,7 @@ export default function JourneyPage() {
         <div className="photos-grid">
           <div className="photo-placeholder">
             <img
-              src="../../assets/IMG_20260214_151707_432.jpg"   // 👈 put your image path here
+              src={photo1}
               alt="Our photo"
               className="photo-img"
             />
@@ -86,7 +88,7 @@ export default function JourneyPage() {
 
           <div className="photo-placeholder">
             <img
-              src="../../assets/us.png"  // 👈 put your image path here
+              src={usImg}
               alt="Our photo"
               className="photo-img"
             />
