@@ -1,0 +1,145 @@
+.love-letter-book-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(90, 58, 90, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1rem;
+  animation: loveLetterFadeIn 0.3s ease;
+}
+
+@keyframes loveLetterFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.love-letter-book {
+  background: linear-gradient(180deg, #fff5f8 0%, #ffe4ec 100%);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.25rem 1.25rem;
+  max-width: 420px;
+  width: 100%;
+  max-height: 85vh;
+  max-height: 85dvh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  border: 2px solid var(--pastel-pink);
+  position: relative;
+  animation: loveLetterSlideUp 0.35s ease;
+}
+
+@keyframes loveLetterSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.love-letter-book-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: rgba(255, 182, 193, 0.5);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #8b4a6b;
+  transition: background var(--transition);
+  touch-action: manipulation;
+}
+
+.love-letter-book-close:hover {
+  background: var(--pastel-pink);
+}
+
+.love-letter-book-hearts {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.love-letter-book-title {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: var(--font-title-size);
+  line-height: var(--font-title-line);
+  color: #8b4a6b;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.love-letter-book-page {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 120px;
+  margin-bottom: 1rem;
+}
+
+.love-letter-book-body {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #5a3a5a;
+  white-space: pre-line; /* preserve line breaks and blank lines as written */
+}
+
+.love-letter-book-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.love-letter-book-btn {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.6rem 1rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #8b4a6b;
+  background: rgba(255, 182, 193, 0.5);
+  border: 2px solid var(--pastel-pink);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background var(--transition);
+}
+
+.love-letter-book-btn:hover:not(:disabled) {
+  background: var(--pastel-pink);
+  color: var(--white);
+}
+
+.love-letter-book-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.love-letter-book-indicator {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #7a5a7a;
+}
+
+@media (min-width: 768px) {
+  .love-letter-book {
+    padding: 2rem 1.5rem 1.5rem;
+  }
+  .love-letter-book-title {
+    font-size: var(--font-title-size);
+    line-height: var(--font-title-line);
+  }
+}

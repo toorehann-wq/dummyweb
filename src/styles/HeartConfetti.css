@@ -1,0 +1,40 @@
+.heart-confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.heart-confetti-particle {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(calc(-50% + var(--x, 0)));
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  opacity: 0;
+  animation: confetti-rise var(--duration, 2s) ease-out var(--delay, 0s) forwards;
+  width: 1em;
+  height: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scale: var(--size, 1);
+}
+
+@keyframes confetti-rise {
+  0% {
+    opacity: 0;
+    transform: translateX(calc(-50% + var(--x, 0))) translateY(0) rotate(0deg);
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(calc(-50% + var(--x, 0))) translateY(-100vh) rotate(var(--rotation, 0deg));
+  }
+}

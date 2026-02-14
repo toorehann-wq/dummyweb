@@ -1,0 +1,143 @@
+.flip-cards-section {
+  margin-bottom: 2rem;
+}
+
+/* Single column, moderate vertical spacing – simple and clean */
+.flip-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+/* Wide cards (2:1) with soft rounded corners */
+.flip-card-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  min-height: 0;
+}
+
+.flip-card {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  touch-action: manipulation;
+  perspective: 600px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.flip-card-inner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card-flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 8px rgba(139, 74, 107, 0.08);
+}
+
+.flip-card-front {
+  background: #FBE4F0;
+}
+
+.flip-card-front-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.flip-card-emoji {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.flip-card-hint {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #8b6b7a;
+  letter-spacing: 0.02em;
+}
+
+.flip-card-back {
+  background: #FBE4F0;
+  transform: rotateY(180deg);
+  border: none;
+  box-shadow: 0 2px 8px rgba(139, 74, 107, 0.08);
+}
+
+.flip-card-back::before {
+  display: none;
+}
+
+.flip-card-text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #6B4F6B;
+  text-align: center;
+  margin: 0;
+  max-width: 90%;
+}
+
+@media (min-width: 480px) {
+  .flip-cards-grid {
+    gap: 0.85rem;
+  }
+  .flip-card-front,
+  .flip-card-back {
+    padding: 1.25rem 1.5rem;
+  }
+  .flip-card-emoji {
+    font-size: 2.25rem;
+  }
+  .flip-card-hint {
+    font-size: 0.85rem;
+  }
+  .flip-card-text {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .flip-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .flip-card-front,
+  .flip-card-back {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+  .flip-card-emoji {
+    font-size: 2.5rem;
+  }
+  .flip-card-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+}

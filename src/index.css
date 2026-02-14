@@ -1,0 +1,86 @@
+/* Valentine Proposal – Global & theme */
+:root {
+  --pastel-pink: #ffb6c1;
+  --pastel-rose: #ffc0cb;
+  --pastel-purple: #e6b8e6;
+  --soft-red: #f08080;
+  --soft-mauve: #dda0dd;
+  --cream: #fff5f5;
+  --white: #fff;
+  --shadow-soft: 0 4px 20px rgba(233, 30, 99, 0.15);
+  --shadow-card: 0 8px 32px rgba(233, 30, 99, 0.2);
+  --font-heading: 'Poppins', sans-serif;
+  --font-title: 'Dancing Script', cursive;
+  --font-title-size: 1.875rem;
+  --font-title-line: 2.25rem;
+  --font-body: 'Nunito', sans-serif;
+  --radius: 20px;
+  --radius-sm: 12px;
+  --transition: 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: linear-gradient(135deg, var(--cream) 0%, var(--pastel-rose) 50%, var(--pastel-purple) 100%);
+  min-height: 100vh;
+  min-height: 100dvh;
+  color: #5a3a5a;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Page transition */
+.page-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Buttons base */
+.btn {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+  min-height: 48px;
+  min-width: 140px;
+  touch-action: manipulation;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .btn {
+    font-size: 1.2rem;
+    padding: 1.1rem 2.2rem;
+    min-width: 160px;
+  }
+}

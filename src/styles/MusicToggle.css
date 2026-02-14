@@ -1,0 +1,55 @@
+.music-toggle {
+  position: fixed;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0.9rem;
+  min-height: 44px;
+  min-width: 44px;
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: #8b4a6b;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--pastel-pink);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.music-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-card);
+}
+
+.music-toggle:active {
+  transform: scale(0.98);
+}
+
+.music-toggle-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.music-toggle-label {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .music-toggle-label {
+    display: inline;
+  }
+}
+
+@media (min-width: 768px) {
+  .music-toggle {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.65rem 1rem;
+  }
+}

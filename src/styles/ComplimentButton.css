@@ -1,0 +1,84 @@
+.compliment-button {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0.9rem;
+  min-height: 44px;
+  min-width: 44px;
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: #8b4a6b;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--pastel-purple);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: transform var(--transition);
+}
+
+.compliment-button:hover {
+  transform: scale(1.05);
+}
+
+.compliment-button:active {
+  transform: scale(0.98);
+}
+
+.compliment-button-icon {
+  font-size: 1.2rem;
+}
+
+.compliment-button-label {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .compliment-button-label {
+    display: inline;
+  }
+}
+
+.compliment-bubbles {
+  position: fixed;
+  bottom: 4rem;
+  left: 1rem;
+  z-index: 46;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+  max-width: 90vw;
+}
+
+.compliment-bubble {
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.98);
+  border: 2px solid var(--pastel-pink);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  color: #8b4a6b;
+  box-shadow: var(--shadow-card);
+  animation: bubble-float 2.5s ease-out forwards;
+  max-width: 280px;
+}
+
+@keyframes bubble-float {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.9);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-120px) scale(0.95);
+  }
+}
