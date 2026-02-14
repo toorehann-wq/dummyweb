@@ -2,12 +2,12 @@ import { useState } from 'react'
 import '../styles/FlipCards.css'
 
 const CARDS = [
-  { emoji: '💕', back: 'You make every day feel special and full of love.' },
+  { emoji: '💕', back: 'You make me feel so special and loved.' },
   { emoji: '🌹', back: 'Your smile lights up my world in the best way.' },
-  { emoji: '✨', back: 'I love how kind and caring you are to everyone.' },
-  { emoji: '💖', back: 'Being with you feels like home, always.' },
-  { emoji: '🌸', back: 'You bring so much joy and beauty into my life.' },
-  { emoji: '💫', back: 'You are my favorite person in the whole universe.' },
+  { emoji: '✨', back: 'I love how kind and caring you are to everyone especially to me.' },
+  { emoji: '💖', back: 'You put genuine efforts to be better every day.' },
+  { emoji: '🌸', back: 'All your little habits are so cute and adorable.' },
+  { emoji: '😂', back: 'Do i have any other option but to love you? hehe jk but seriously, i your exsistence is enough for me to love you.' },
 ]
 
 export default function FlipCards() {
