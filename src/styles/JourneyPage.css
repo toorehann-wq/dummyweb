@@ -13,6 +13,7 @@
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
+  contain: strict;
 }
 
 .floating-heart {
@@ -20,9 +21,11 @@
   bottom: -2rem;
   color: rgba(233, 30, 99, 0.55);
   font-size: 2rem;
-  animation: float-heart 18s ease-in-out infinite;
+  animation: float-heart 20s ease-in-out infinite;
   transform: translateX(-50%);
-  text-shadow: 0 0 20px rgba(233, 30, 99, 0.2);
+  text-shadow: 0 0 12px rgba(233, 30, 99, 0.15);
+  will-change: transform;
+  contain: layout style paint;
 }
 
 @keyframes float-heart {

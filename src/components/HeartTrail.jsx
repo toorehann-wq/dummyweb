@@ -2,9 +2,9 @@ import { useEffect, useRef, useCallback, useState } from 'react'
 import { useApp } from '../context/AppContext'
 import '../styles/HeartTrail.css'
 
-const SYMBOLS = ['❤️', '💕', '💗', '✨']
-const MAX_PARTICLES = 12
-const THROTTLE_MS = 80
+const SYMBOLS = ['❤️', '💕', '💗']
+const MAX_PARTICLES = 5
+const THROTTLE_MS = 150
 
 export default function HeartTrail() {
   const { loveLetterOpen } = useApp()

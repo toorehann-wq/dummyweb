@@ -17,7 +17,10 @@ export default function ComplimentButton() {
   const addBubble = useCallback(() => {
     const text = COMPLIMENTS[Math.floor(Math.random() * COMPLIMENTS.length)]
     const id = Date.now() + Math.random()
-    setBubbles((prev) => [...prev, { id, text }])
+    setBubbles((prev) => {
+      const next = [...prev, { id, text }]
+      return next.slice(-3)
+    })
     setTimeout(() => {
       setBubbles((prev) => prev.filter((b) => b.id !== id))
     }, 2500)

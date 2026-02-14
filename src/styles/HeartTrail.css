@@ -4,14 +4,16 @@
   pointer-events: none;
   z-index: 1;
   overflow: hidden;
+  contain: strict;
 }
 
 .heart-trail-particle {
   position: fixed;
-  font-size: 1.2rem;
+  font-size: 1rem;
   transform: translate(-50%, -50%);
-  animation: trail-fade 0.8s ease-out forwards;
+  animation: trail-fade 0.7s ease-out forwards;
   pointer-events: none;
+  will-change: opacity, transform;
 }
 
 @keyframes trail-fade {

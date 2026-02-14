@@ -43,11 +43,9 @@ const TABS = [
   { id: 'lovevc', label: 'Love & VC 💖' },
 ]
 
-/* Floating hearts: [left %, size in rem, animation delay in s] – big & visible */
+/* Floating hearts: fewer for better performance, [left %, size, delay] */
 const FLOATING_HEARTS = [
-  [5, 2.5, 0], [18, 2, 2], [32, 3, 5], [55, 2.2, 1], [72, 2.5, 4], [88, 1.8, 3],
-  [12, 2.8, 7], [45, 2, 6], [68, 2.5, 8], [25, 2.2, 10], [78, 1.8, 9], [92, 2.5, 11],
-  [8, 2, 12], [38, 2.8, 14], [62, 2.2, 13], [85, 2, 15],
+  [10, 2, 0], [35, 2.2, 3], [60, 1.8, 6], [85, 2, 2], [20, 2.5, 5], [70, 2, 4], [50, 1.8, 1], [90, 2, 7],
 ]
 
 export default function JourneyPage() {

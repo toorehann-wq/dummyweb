@@ -2,7 +2,9 @@ import { useRef, useCallback } from 'react'
 import { useApp } from '../context/AppContext'
 import '../styles/MusicToggle.css'
 
-const Love_song = '../../assets/cute_song.mp3'
+// Dynamic import so app builds even if file is missing; path works on GitHub Pages
+const loveSongUrlRef = { current: null }
+import('../../assets/cute_song.mp3').then((m) => { loveSongUrlRef.current = m.default }).catch(() => {})
 
 export default function MusicToggle() {
   const { audioRef, musicPlaying, setMusicPlaying } = useApp()
@@ -11,9 +13,11 @@ export default function MusicToggle() {
   const toggle = useCallback(() => {
     if (!hasInteracted.current) {
       hasInteracted.current = true
-      if (!audioRef.current) {
-        const audio = new Audio(Love_song)
+      const url = loveSongUrlRef.current
+      if (!audioRef.current && url) {
+        const audio = new Audio(url)
         audio.loop = true
+        audio.volume = 0.6
         audioRef.current = audio
       }
     }
