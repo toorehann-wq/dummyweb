@@ -7,7 +7,7 @@ const CARDS = [
   { emoji: '✨', back: 'I love how kind and caring you are to everyone especially to me.' },
   { emoji: '💖', back: 'You put genuine efforts to be better every day.' },
   { emoji: '🌸', back: 'All your little habits are so cute and adorable.' },
-  { emoji: '😂', back: 'Do i have any other option but to love you? hehe jk but seriously, i your exsistence is enough for me to love you.' },
+  { emoji: '😂', back: 'Do i have any other option but to love you? hehe jk but seriously, your exsistence is enough for me to love you.' },
 ]
 
 export default function FlipCards() {
